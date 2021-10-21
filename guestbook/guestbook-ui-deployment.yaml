@@ -10,8 +10,8 @@ spec:
       app: guestbook-ui
   template:
     metadata:
-#      labels:
-#        app: guestbook-ui
+      labels:
+        app: guestbook-ui
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
