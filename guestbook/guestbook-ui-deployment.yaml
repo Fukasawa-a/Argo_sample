@@ -9,9 +9,9 @@ spec:
     matchLabels:
       app: guestbook-ui
   template:
-#    metadata:
-#      labels:
-#        app: guestbook-ui
+    metadata:
+      labels:
+        app: guestbook-ui
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
