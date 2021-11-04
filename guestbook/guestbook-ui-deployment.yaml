@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: ghcr.io/tac-ichiro/ks-guestbook-demo:0.7
+      - image: ghcr.io/tac-ichiro/ks-guestbook-demo:0.8
         name: guestbook-ui
         ports:
         - containerPort: 8080
