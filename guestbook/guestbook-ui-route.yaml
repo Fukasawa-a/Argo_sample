@@ -1,0 +1,17 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: guestbook
+  labels:
+    app.kubernetes.io/instance: guestbook
+spec:
+  host: guestbook-fukasawa.apps.minoh.castle.test
+  to:
+    kind: Service
+    name: guestbook-ui
+    weight: 100
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
