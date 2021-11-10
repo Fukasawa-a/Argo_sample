@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
   labels:
-   jojo-version: 6
+   jojo-version: 5
 spec:
   replicas: 1
   revisionHistoryLimit: 3
