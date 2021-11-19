@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-ui
+  labels:
+   jojo-version: 5
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-ui
+  template:
+    metadata:
+      labels:
+        app: guestbook-ui
+    spec:
+      containers:
+      - image: argoproj/rollouts-demo:blue # gree, yellow, red, purple
+        name: guestbook-ui
+        ports:
+        - containerPort: 8080
