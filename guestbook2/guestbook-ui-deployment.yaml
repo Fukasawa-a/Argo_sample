@@ -5,7 +5,7 @@ metadata:
   labels:
    jojo-version: 5
 spec:
-  replicas: 2
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -16,7 +16,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: ghcr.io/tac-ichiro/ks-guestbook-demo:0.8
+      - image: argoproj/rollouts-demo:blue # gree, yellow, red, purple
         name: guestbook-ui
         ports:
         - containerPort: 8080
